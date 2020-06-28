@@ -46,7 +46,7 @@ Ref<AudioEffectInstance> AudioEffectStream::instance() {
 
 Ref<RingBufferAudioFrame> AudioEffectStream::init(int32_t p_ring_buffer_max_size) {
 	if (current_instance == 0) {
-		WARN_PRINTS("Streaming should not be set as active before Godot has initialized.");
+		WARN_PRINT("Streaming should not be set as active before Godot has initialized.");
 		buffering_active = false;
 		return nullptr;
 	}
